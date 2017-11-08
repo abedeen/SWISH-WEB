@@ -9,6 +9,9 @@ import { EditorModule } from './editor/editor.module';
 import { HomeModule } from './home/home.module';
 import { ProfileModule } from './profile/profile.module';
 import { SettingsModule } from './settings/settings.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material';
 import {
   ApiService,
   ArticlesService,
@@ -22,6 +25,7 @@ import {
   TagsService,
   UserService
 } from './shared';
+import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -29,9 +33,10 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavOverviewComponent,
   ],
-  imports: [
+  imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
     BrowserModule,
     ArticleModule,
     AuthModule,
