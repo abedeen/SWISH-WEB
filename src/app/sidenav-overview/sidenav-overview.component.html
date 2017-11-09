@@ -3,14 +3,64 @@
     Jolly good!
   </mat-sidenav>
 
-  <div class="example-sidenav-content">
-    <button type="button" mat-button  (click)="sidenav.open()">
-      Open sidenav
-    </button>
-    <router-outlet></router-outlet>
 
-    <layout-footer></layout-footer>
+    <div  class="row">
+<div class="col-md-12">
+  <nav class=" navbar navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class=""style="float: right; color:#fff; font-size: 1.5em;
+    text-transform: uppercase; margin-top: 5px;font-family: "Titillium Web", sans-serif;
+" (click)="sidenav.open()">
+      Open sidenav3
+    </a>
+    <a class="navbar-brand" routerLink="/">SWISH</a>
+
+    <!-- Show this for logged out users -->
+    <ul *showAuthed="false"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/">
+          Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/login"
+          routerLinkActive="active">
+          Sign in
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/register"
+          routerLinkActive="active">
+          Sign up
+        </a>
+      </li>
+
+    </ul>
+
 
   </div>
+</nav>
+
+
+</div>
+    </div>
+    <div  class="row">
+<div class="col-md-12">
+  <!--layout-header></layout-header-->
+  <router-outlet></router-outlet>
+
+  <layout-footer></layout-footer>
+</div>
+    </div>
+
+
+
 
 </mat-sidenav-container>
