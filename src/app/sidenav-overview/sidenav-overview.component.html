@@ -8,9 +8,7 @@
 <div class="col-md-12">
   <nav class=" navbar navbar-dark bg-primary fixed-top">
   <div class="container">
-    <a class=""style="float: right; color:#fff; font-size: 1.5em;
-    text-transform: uppercase; margin-top: 5px;font-family: "Titillium Web", sans-serif;
-" (click)="sidenav.open()">
+    <a class=""style="float: right" (click)="sidenav.open()">
       Open sidenav3
     </a>
     <a class="navbar-brand" routerLink="/">SWISH</a>
@@ -55,8 +53,8 @@
 <div class="col-md-12">
   <!--layout-header></layout-header-->
   <router-outlet></router-outlet>
-
-  <layout-footer></layout-footer>
+  <app-google-map1></app-google-map1>
+  <!--layout-footer></layout-footer-->
 </div>
     </div>
 
