@@ -3,3 +3,8 @@
 .navbar-brand{
   color: #fff !important;
 }
+.row1{height:10vh;overflow:hidden;}
+  .row2{height:88vh;overflow:hidden;}
+.home-page>.row{
+  height:100vh;background-color: green;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArticleListConfig, TagsService, UserService } from '../shared';
-
+//import { GoogleMapsComponent } from '../shared/google-maps/google-maps.component';
 @Component({
   selector: 'home-page',
   templateUrl: './home.component.html',

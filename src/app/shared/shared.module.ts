@@ -3,28 +3,35 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { AgmCoreModule } from '@agm/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent } from './article-helpers';
 import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBE0PR7Wl64nnbDyPuJ7PsQaiG_obiDG-0'
+    }),
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
     RouterModule
   ],
   declarations: [
-    ArticleListComponent,
+    ArticleListComponent,GoogleMapsComponent,
     ArticleMetaComponent,
     ArticlePreviewComponent,
     FavoriteButtonComponent,
     FollowButtonComponent,
     ListErrorsComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    GoogleMapsComponent
   ],
   exports: [
     ArticleListComponent,
@@ -38,7 +45,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
     HttpModule,
     ListErrorsComponent,
     RouterModule,
-    ShowAuthedDirective
+    ShowAuthedDirective,GoogleMapsComponent
   ]
 })
 export class SharedModule {}

@@ -27,17 +27,15 @@ import {
   UserService
 } from './shared';
 import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
-import { GoogleMap1Component } from './google-map1/google-map1.component';
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
-
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    SidenavOverviewComponent,
-    GoogleMap1Component,
+    SidenavOverviewComponent    
   ],
+
   imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
     BrowserModule,
     AgmCoreModule.forRoot({
