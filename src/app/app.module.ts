@@ -33,13 +33,14 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    SidenavOverviewComponent    
+    SidenavOverviewComponent
   ],
 
   imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBE0PR7Wl64nnbDyPuJ7PsQaiG_obiDG-0'
+      apiKey: 'AIzaSyD_yJZiosmZ7kPX90TJAChGvllyZcow17E',
+      libraries: ["places"]
     }),
     ArticleModule,
     AuthModule,

@@ -16,7 +16,8 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     CommonModule,
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBE0PR7Wl64nnbDyPuJ7PsQaiG_obiDG-0'
+      apiKey: 'AIzaSyD_yJZiosmZ7kPX90TJAChGvllyZcow17E',
+      libraries: ["places"]
     }),
     FormsModule,
     ReactiveFormsModule,
@@ -48,4 +49,5 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     ShowAuthedDirective,GoogleMapsComponent
   ]
 })
+
 export class SharedModule {}
