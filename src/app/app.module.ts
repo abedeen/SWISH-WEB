@@ -17,6 +17,7 @@ import {
   ApiService,
   ArticlesService,
   AuthGuard,
+
   CommentsService,
   FooterComponent,
   HeaderComponent,
@@ -27,6 +28,7 @@ import {
   UserService
 } from './shared';
 import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
+
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 @NgModule({
   declarations: [

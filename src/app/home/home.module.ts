@@ -5,10 +5,18 @@ import { HomeComponent } from './home.component';
 import { HomeAuthResolver } from './home-auth-resolver.service';
 import { SharedModule } from '../shared';
 import { GoogleMapsComponent } from '../shared/google-maps/google-maps.component';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
-    path: '',
+    path: 'showMap',
     component: HomeComponent,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: '',
+    component: WelcomeScreenComponent,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
@@ -21,7 +29,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     SharedModule
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
+    WelcomeScreenComponent
   ],
   providers: [
     HomeAuthResolver
