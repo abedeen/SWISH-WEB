@@ -6,6 +6,7 @@ import { HomeAuthResolver } from './home-auth-resolver.service';
 import { SharedModule } from '../shared';
 import { GoogleMapsComponent } from '../shared/google-maps/google-maps.component';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+import { DirectionsMapDirective } from './directions-map.directive';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'showMap',
@@ -30,7 +31,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   ],
   declarations: [
     HomeComponent,
-    WelcomeScreenComponent
+    WelcomeScreenComponent,
+    DirectionsMapDirective
   ],
   providers: [
     HomeAuthResolver
