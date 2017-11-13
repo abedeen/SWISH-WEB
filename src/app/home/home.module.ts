@@ -6,6 +6,9 @@ import { HomeAuthResolver } from './home-auth-resolver.service';
 import { SharedModule } from '../shared';
 import { GoogleMapsComponent } from '../shared/google-maps/google-maps.component';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+
+import { SignupComponent } from './signup/signup.component';
+import { Starup2Component } from './starup2/starup2.component';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'showMap',
@@ -15,8 +18,22 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     }
   },
   {
-    path: '',
+    path: 'welcome',
     component: WelcomeScreenComponent,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'startup',
+    component: Starup2Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
@@ -30,7 +47,9 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   ],
   declarations: [
     HomeComponent,
-    WelcomeScreenComponent
+    WelcomeScreenComponent,
+    SignupComponent,
+    Starup2Component
   ],
   providers: [
     HomeAuthResolver
