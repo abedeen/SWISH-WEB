@@ -1,0 +1,20 @@
+
+	.list-unstyled{
+	color:#fff;
+	font-size:30px;}
+
+	.lead{color:#fff;}
+	.bg{background-color:#5dbd85;
+	}
+	.btn{
+  	height:40px;
+  	width:160px;
+  	background-color: #5dbd85;
+  	color: white;
+	font-size:11px !important;
+  	border: 1px solid white;
+    	}
+	.btn:hover{
+    	background-color: white;
+    	color:#5dbd85;
+	}

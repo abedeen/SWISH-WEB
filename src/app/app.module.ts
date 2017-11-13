@@ -18,7 +18,6 @@ import {
   ApiService,
   ArticlesService,
   AuthGuard,
-
   CommentsService,
   FooterComponent,
   HeaderComponent,
@@ -35,7 +34,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    SidenavOverviewComponent
+    SidenavOverviewComponent,
   ],
 
   imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
@@ -53,6 +52,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     SharedModule,
     SettingsModule,
   ],
+
   providers: [
     ApiService,
     ArticlesService,
@@ -60,8 +60,9 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     CommentsService,
     JwtService,
     ProfilesService,
-    TagsService,
+    TagsService ,
     UserService
+
   ],
   bootstrap: [AppComponent]
 })
