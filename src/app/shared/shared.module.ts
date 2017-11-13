@@ -10,6 +10,8 @@ import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { MyLookDirective } from './my-look.directive';
+import { DirectionsMapDirective } from './directions-map.directive';
 
 @NgModule({
   imports: [
@@ -22,7 +24,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     ArticleListComponent,GoogleMapsComponent,
@@ -32,7 +34,9 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     FollowButtonComponent,
     ListErrorsComponent,
     ShowAuthedDirective,
-    GoogleMapsComponent
+    GoogleMapsComponent,
+    MyLookDirective,
+    DirectionsMapDirective
   ],
   exports: [
     ArticleListComponent,
@@ -46,7 +50,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     HttpModule,
     ListErrorsComponent,
     RouterModule,
-    ShowAuthedDirective,GoogleMapsComponent
+    ShowAuthedDirective,GoogleMapsComponent,MyLookDirective
   ]
 })
 

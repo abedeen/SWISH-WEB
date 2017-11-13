@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
 import {
   ApiService,
   ArticlesService,
@@ -27,7 +28,6 @@ import {
   UserService
 } from './shared';
 import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
-
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 @NgModule({
   declarations: [
