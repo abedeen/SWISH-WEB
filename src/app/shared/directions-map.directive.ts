@@ -30,12 +30,15 @@ export class DirectionsMapDirective {
               var me = this;
               var latLngA = new google.maps.LatLng({lat: this.origin.latitude, lng: this.origin.longitude });
               var latLngB = new google.maps.LatLng({lat: this.destination.latitude, lng: this.destination.longitude });
+
               this.directionsDisplay.setMap(map);
+
               this.directionsDisplay.setOptions({
+              options: { suppressMarkers: true },
                 polylineOptions: {
                             strokeWeight: 8,
                             strokeOpacity: 0.7,
-                            strokeColor:  '#00468c'
+                            strokeColor:  '#00B3FD'
                         }
                 });
               this.directionsDisplay.setDirections({routes: []});

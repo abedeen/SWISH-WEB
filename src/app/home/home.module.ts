@@ -7,8 +7,8 @@ import { SharedModule } from '../shared';
 import { GoogleMapsComponent } from '../shared/google-maps/google-maps.component';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 
-import { SignupComponent } from './signup/signup.component';
-import { Starup2Component } from './starup2/starup2.component';
+//import { SignupComponent } from './signup/signup.component';
+//import { Starup2Component } from './starup2/starup2.component';
 import { DirectionsMapDirective } from './directions-map.directive';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -24,7 +24,7 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
-  },
+  }/*,
   {
     path: 'signup',
     component: SignupComponent,
@@ -38,7 +38,7 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
-  }
+  }*/
 ]);
 
 @NgModule({
