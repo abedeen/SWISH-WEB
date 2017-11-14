@@ -17,11 +17,12 @@ declare var jQuery:any;
   `],
 template: `
     <div class="container1 ">
-      <div class="form-group1">
+    <img class="img1 {{showSearch?'hidden':''}}" (click)="showSearch=!showSearch;" src="/assets/image/direction-icon.png" height="40px"/>
+      <div class="form-group1 {{showSearch?'':'hidden'}}">
         <input placeholder="Enter source location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupInput [formControl]="destinationInput">
         <input placeholder="Enter destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupOutput [formControl]="destinationOutput" >
       </div>
-       <agm-map [latitude]="latitude"  [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" [styles]="mapCustomStyles">
+       <agm-map [latitude]="latitude"  (click)="showSearch=!showSearch;" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" [styles]="mapCustomStyles">
 <agm-marker ng-if="!origin" [latitude]="latitudeo" [longitude]="longitudeo"  [iconUrl]="'/assets/image/iconStart.ico'" [markerDraggable]="true" (dragEnd)="changeSouce($event);"></agm-marker>
 <agm-marker [latitude]="latituded" [longitude]="longituded"  [markerDraggable]="true"  [iconUrl]="'/assets/image/iconStart.ico'" (dragEnd)="changedestincations($event);"></agm-marker>
                 <sebm-google-map-directions  [origin]="origin" [destination]="destination"></sebm-google-map-directions>
@@ -33,7 +34,7 @@ template: `
 export class GoogleMapsComponent implements OnInit {
 public latitude: number;
   public longitude: number;
-
+public showSearch=false;
   public latitudeo: number;
     public longitudeo: number;
     public latituded: number;
@@ -149,6 +150,7 @@ this.ngZone.run(() => {
                   this.vc.destination = { longitude: place.geometry.location.lng(), latitude: place.geometry.location.lat() }; // its a example aleatory position
                   this.latituded = place.geometry.location.lat();
                   this.longituded = place.geometry.location.lng();
+
                   this.vc.destinationPlaceId = place.place_id;
               }
 
@@ -160,6 +162,7 @@ this.ngZone.run(() => {
 
               //Update the directions
               this.vc.updateDirections();
+
               this.zoom = 12;
             });
 
@@ -170,6 +173,7 @@ this.ngZone.run(() => {
     getDistanceAndDuration(){
       this.estimatedTime = this.vc.estimatedTime;
       this.estimatedDistance = this.vc.estimatedDistance;
+
     }
 
     scrollToBottom(): void {
