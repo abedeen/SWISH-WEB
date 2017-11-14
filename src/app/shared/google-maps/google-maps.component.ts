@@ -11,20 +11,22 @@ declare var jQuery:any;
   selector: 'app-google-maps',
    styles: [`
     .sebm-google-map-container {
-       height: 70vH;
+       height: 89vH;
      },
 
   `],
 template: `
-    <div class="container">
-      <div class="form-group">
+    <div class="container1 ">
+    <img class="img1 {{showSearch?'hidden':''}}" (click)="showSearch=!showSearch;" src="/assets/image/direction-icon.png" height="40px"/>
+      <div class="form-group1 {{showSearch?'':'hidden'}}">
         <input placeholder="Enter source location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupInput [formControl]="destinationInput">
         <input placeholder="Enter destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupOutput [formControl]="destinationOutput" >
       </div>
-       <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" [styles]="mapCustomStyles">
-
-                <sebm-google-map-directions [origin]="origin" [destination]="destination"></sebm-google-map-directions>
-              </agm-map>
+       <agm-map [latitude]="latitude"  (click)="showSearch=!showSearch;" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" [styles]="mapCustomStyles">
+<agm-marker ng-if="!origin" [latitude]="latitudeo" [longitude]="longitudeo"  [iconUrl]="'/assets/image/iconStart.ico'" [markerDraggable]="true" (dragEnd)="changeSouce($event);"></agm-marker>
+<agm-marker [latitude]="latituded" [longitude]="longituded"  [markerDraggable]="true"  [iconUrl]="'/assets/image/iconStart.ico'" (dragEnd)="changedestincations($event);"></agm-marker>
+                <sebm-google-map-directions  [origin]="origin" [destination]="destination"></sebm-google-map-directions>
+       </agm-map>
     </div>
   `,
  providers : [ GoogleMapsAPIWrapper ]
@@ -32,6 +34,11 @@ template: `
 export class GoogleMapsComponent implements OnInit {
 public latitude: number;
   public longitude: number;
+public showSearch=false;
+  public latitudeo: number;
+    public longitudeo: number;
+    public latituded: number;
+      public longituded: number;
   public destinationInput: FormControl;
   public destinationOutput: FormControl;
   public zoom: number;
@@ -68,8 +75,9 @@ public latitude: number;
       this.zoom = 4;
       this.latitude = 39.8282;
       this.longitude = -98.5795;
+
       //this.iconurl = '../image/map-icon.png';
-      this.iconurl = '../image/map-icon.png';
+      this.iconurl = '/assets/image/iconStart.co';
 
      // this.mapCustomStyles = this.getMapCusotmStyles();
       //create search FormControl
@@ -92,7 +100,38 @@ public latitude: number;
                 this.setupPlaceChangedListener(autocompleteOutput, 'DES');
       });
     }
+public changeSouce(obj){
+this.vc.origin={latitude:obj.coords.lat,longitude:obj.coords.lng};
+this.ngZone.run(() => {
 
+  if(this.vc.directionsDisplay === undefined){
+  this.mapsAPILoader.load().then(() => {
+        this.vc.directionsDisplay = new google.maps.DirectionsRenderer;
+      });
+}
+
+  //Update the directions
+  this.vc.updateDirections();
+  this.zoom = 12;
+});
+
+}
+public changedestincations(obj){
+this.vc.destination={latitude:obj.coords.lat,longitude:obj.coords.lng};
+this.ngZone.run(() => {
+
+  if(this.vc.directionsDisplay === undefined){
+  this.mapsAPILoader.load().then(() => {
+        this.vc.directionsDisplay = new google.maps.DirectionsRenderer;
+      });
+}
+
+  //Update the directions
+  this.vc.updateDirections();
+  this.zoom = 12;
+});
+
+}
     private setupPlaceChangedListener(autocomplete: any, mode: any ) {
       autocomplete.addListener("place_changed", () => {
             this.ngZone.run(() => {
@@ -104,19 +143,26 @@ public latitude: number;
               }
               if (mode === 'ORG') {
                   this.vc.origin = { longitude: place.geometry.location.lng(), latitude: place.geometry.location.lat() };
+                  this.latitudeo = place.geometry.location.lat();
+                  this.longitudeo = place.geometry.location.lng();
                   this.vc.originPlaceId = place.place_id;
               } else {
                   this.vc.destination = { longitude: place.geometry.location.lng(), latitude: place.geometry.location.lat() }; // its a example aleatory position
+                  this.latituded = place.geometry.location.lat();
+                  this.longituded = place.geometry.location.lng();
+
                   this.vc.destinationPlaceId = place.place_id;
               }
 
-              if(this.vc.directionsDisplay === undefined){ this.mapsAPILoader.load().then(() => {
+              if(this.vc.directionsDisplay === undefined){
+              this.mapsAPILoader.load().then(() => {
                     this.vc.directionsDisplay = new google.maps.DirectionsRenderer;
                   });
             }
 
               //Update the directions
               this.vc.updateDirections();
+
               this.zoom = 12;
             });
 
@@ -127,6 +173,7 @@ public latitude: number;
     getDistanceAndDuration(){
       this.estimatedTime = this.vc.estimatedTime;
       this.estimatedDistance = this.vc.estimatedDistance;
+
     }
 
     scrollToBottom(): void {
@@ -148,7 +195,9 @@ public latitude: number;
         navigator.geolocation.getCurrentPosition((position) => {
           this.latitude = position.coords.latitude;
           this.longitude = position.coords.longitude;
-          this.zoom = 12;
+          this.latitudeo = position.coords.latitude;
+          this.longitudeo =position.coords.longitude;
+          this.zoom = 15;
         });
       }
     }

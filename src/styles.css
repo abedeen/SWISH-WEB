@@ -3,8 +3,24 @@
 .navbar-brand{
   color: #fff !important;
 }
+.hidden{display:none;}
 .row1{height:10vh;overflow:hidden;}
   .row2{height:86vh;overflow:hidden;}
 .home-page>.row{
   height:100vh;
+}
+.img1{
+  position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+}
+.form-group1{
+  position: absolute;
+left: 0;
+z-index: 1;
+background-color: white;
+padding: 10px;
+padding-right: 20px;
+padding-left: 20px;
 }
