@@ -11,13 +11,13 @@ declare var jQuery:any;
   selector: 'app-google-maps',
    styles: [`
     .sebm-google-map-container {
-       height: 70vH;
+       height: 89vH;
      },
 
   `],
 template: `
-    <div class="container">
-      <div class="form-group">
+    <div class="container1 ">
+      <div class="form-group1">
         <input placeholder="Enter source location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupInput [formControl]="destinationInput">
         <input placeholder="Enter destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupOutput [formControl]="destinationOutput" >
       </div>
