@@ -16,22 +16,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     }
   },
   {
-    path: 'welcome',
+    path: '',
     component: WelcomeScreenComponent,
-    resolve: {
-      isAuthenticated: HomeAuthResolver
-    }
-  },
-  {
-    path: 'signup',
-    component: SignupComponent,
-    resolve: {
-      isAuthenticated: HomeAuthResolver
-    }
-  },
-  {
-    path: 'startup',
-    component: Starup2Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
@@ -46,7 +32,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   declarations: [
     HomeComponent,
     WelcomeScreenComponent,
-    DirectionsMapDirective
+    SignupComponent,
+    Starup2Component
   ],
   providers: [
     HomeAuthResolver
