@@ -12,13 +12,13 @@ import { SettingsModule } from './settings/settings.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {
   ApiService,
   ArticlesService,
   AuthGuard,
-
   CommentsService,
   FooterComponent,
   HeaderComponent,
@@ -29,13 +29,16 @@ import {
   UserService
 } from './shared';
 import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
+//import {SlideToggleOverviewExample} from './slide-toggle-overview-example';
+import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    SidenavOverviewComponent
+    SidenavOverviewComponent,
+    FormFieldOverviewExampleComponent
   ],
 
   imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
@@ -51,8 +54,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     ProfileModule,
     rootRouting,
     SharedModule,
-    SettingsModule,
-  ],
+    SettingsModule,  ],
   providers: [
     ApiService,
     ArticlesService,
