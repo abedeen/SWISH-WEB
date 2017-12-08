@@ -1,0 +1,66 @@
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!--div class="container">
+  <div class="row">
+    <i class="fa fa-angle-left fa-2x pull-left" aria-hidden="true"></i>
+  <div class="button-row">
+    <button mat-button>Driver</button>
+      <button mat-button>Rider</button>
+</div>
+</div>
+</div-->
+<div class="col-lg-12 bg container text-center" style="display:flex;">
+<div class="col-md-2 col-sm-2 col-xs-2">
+  <a href="#driverinfo">
+  <i class="fa fa-angle-left fa-2x pull-left cW" aria-hidden="true"></i></a>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10">
+<div class="btn-group pb-2 pt-2  text-center">
+ <button type="button" class="btcn btn">Driver info</button>
+ <button type="button" class="btcn btn">Car info</button>
+</div>
+</div>
+</div>
+<div class="col-lg-12 bg1 container text-center pt-3 pb-2">
+<i class="material-icons" style="color:#5dbd85;font-size:48px;">directions_car</i>
+</div>
+
+<div class="col-lg-12 b dF" >
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p class="mt-1 mb-1 mr-5 ">Make and model</p></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <mat-form-field> <input matInput type="text" placeholder="Make and model" [(ngModel)]="value1"/>
+      <button mat-button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+      <mat-icon>close</mat-icon>
+      </button></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p class="mb-1 mt-1">Year</p></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <mat-form-field> <input matInput  [disabled]='disabled' type="text" placeholder="Year"/>
+  <button mat-button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+    <mat-icon>close</mat-icon>
+  </button></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p class="mb-1 mt-1">Color</p></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <mat-form-field> <input matInput type="text" placeholder="Color" [(ngModel)]="value3"/>
+      <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+      <mat-icon>close</mat-icon>
+      </button></mat-form-field></div>
+    </div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p class="mb-1 mt-1">License Plate</p></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><mat-form-field>  <input matInput placeholder="License Plate" value=""></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p class="mb-1 mt-1">I don't have Car</p></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><mat-slide-toggle></mat-slide-toggle></div>
+</div>
+
+<div class="pb-2 bg1"></div>
+<div class="col-lg-12 bg container text-center pl-0 pr-0">
+<div class="btn-group">
+ <button type="button" class="btcn c1 btn-lg">Cancel</button>
+ <button type="button" class="btcn c2 btn-lg">Save</button>
+</div>
+</div>

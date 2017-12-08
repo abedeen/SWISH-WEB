@@ -1,0 +1,81 @@
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!--div class="container">
+  <div class="row">
+    <i class="fa fa-angle-left fa-2x pull-left" aria-hidden="true"></i>
+  <div class="button-row">
+    <button mat-button>Driver</button>
+      <button mat-button>Rider</button>
+</div>
+</div>
+</div-->
+<div class="col-lg-12 bg container text-center" style="display:flex;">
+<div class="col-md-2 col-sm-2 col-xs-2">
+  <a href="#"><i class="fa fa-angle-left fa-2x pull-left cW" aria-hidden="true"></i></a>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10">
+<div class="btn-group pb-2 pt-2  text-center">
+ <button type="button" class="btcn btn">Driver info</button>
+ <button type="button" class="btcn btn">Car info</button>
+</div>
+</div>
+</div>
+<div class="col-lg-12 bg1 container text-center pb-2">
+<img src="/assets/image/info.jpg"/>
+<p class="mb-0">Safety first.To keep swish users safe we run a one-time motor vehicle history report on all Drivers.</p>
+<p class="mb-0">Please use the exact name that appears on your driver's licence.</p>
+</div>
+
+<div class="col-lg-12 b dF" >
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mt-1 mb-1 mr-5 ">First Name</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <mat-form-field> <input matInput type="text" placeholder="First Name" [(ngModel)]="value1"/>
+      <button mat-button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+      <mat-icon>close</mat-icon>
+      </button></mat-form-field></div>    </div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mb-1 mt-1">Middle Name</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <mat-form-field> <input matInput  [disabled]='disabled' type="text" placeholder="Middle Name" [(ngModel)]="value2"/>
+  <button mat-button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+    <mat-icon>close</mat-icon>
+  </button></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mb-1 mt-1">I don't have middle name</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><mat-slide-toggle [(ngModel)]="disabled"></mat-slide-toggle></div>
+</div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mb-1 mt-1">Last Name</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <mat-form-field> <input matInput type="text" placeholder="Last Name" [(ngModel)]="value3"/>
+      <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+      <mat-icon>close</mat-icon>
+      </button></mat-form-field></div>
+    </div>
+<div class="col-lg-12 b dF">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mb-1 mt-1">Birth Date</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><mat-form-field>  <input matInput placeholder="mm/dd/yyyy" value=""></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <p class="mb-1 mt-1">Driver's Licence#</p>
+    </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <mat-form-field> <input matInput placeholder="License no" value=""></mat-form-field></div>
+</div>
+<div class="col-lg-12 b dF">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><p class="mb-1 mt-1">License State</p></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><mat-form-field>  <mat-select placeholder="License state">
+        <mat-option>None</mat-option>
+          <mat-option value="option1">Active</mat-option>
+          <mat-option value="option2">Expired</mat-option>
+  </mat-select></mat-form-field></div>
+</div>
+
+<div class="pb-2 bg1"></div>
+<div class="col-lg-12 bg container text-center pl-0 pr-0">
+<div class="btn-group">
+ <button type="button" class="btcn c1 btn-lg">Cancel</button>
+ <button type="button" class="btcn c2 btn-lg">Save</button>
+</div>
+</div>

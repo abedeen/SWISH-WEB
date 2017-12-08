@@ -11,10 +11,9 @@ import { ProfileModule } from './profile/profile.module';
 import { SettingsModule } from './settings/settings.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material';
+import {MatSidenavModule ,MatSelectModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-
 import {
   ApiService,
   ArticlesService,
@@ -31,6 +30,8 @@ import {
 import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
 //import {SlideToggleOverviewExample} from './slide-toggle-overview-example';
 import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
+import { Page5Component } from './page5/page5.component';
+
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 @NgModule({
   declarations: [
@@ -38,10 +39,11 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     FooterComponent,
     HeaderComponent,
     SidenavOverviewComponent,
-    FormFieldOverviewExampleComponent
+    FormFieldOverviewExampleComponent,
+    Page5Component
   ],
 
-  imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,
+  imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,MatFormFieldModule,MatSelectModule,
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD_yJZiosmZ7kPX90TJAChGvllyZcow17E',

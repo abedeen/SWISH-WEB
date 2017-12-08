@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {MatInputModule,MatIconModule,MatButtonModule,MatSlideToggleModule,MatSelectModule} from '@angular/material';
 import { HomeComponent } from './home.component';
 import { HomeAuthResolver } from './home-auth-resolver.service';
 import { SharedModule } from '../shared';
@@ -15,6 +16,9 @@ import { Page2Component } from './page2/page2.component';
 import { DemoComponent } from './demo/demo.component';
 import { Page3Component } from './page3/page3.component';
 import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
+import { Page5Component } from './page5/page5.component';
+import { Page6Component } from './page6/page6.component';
+import { Page7Component } from './page7/page7.component';
 //import { SignUpComponent } from './sign-up/sign-up.component';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -74,22 +78,43 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     }
   },
   {
-    path: 'page2',
+    path: 'profile',
     component: Page2Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
   },
   {
-    path: 'page3',
+    path: 'address',
     component: Page3Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
   },
   {
-    path: 'page3',
-    component: Page3Component,
+    path: 'pricingandpayments',
+    component: DemoComponent,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'driverinfo',
+    component: Page5Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'carinfo',
+    component: Page6Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'freecarpooling',
+    component: Page7Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
@@ -99,7 +124,12 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
 @NgModule({
   imports: [
     homeRouting,
-    SharedModule
+    SharedModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   declarations: [
     HomeComponent,
@@ -113,7 +143,10 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     Page2Component,
     DemoComponent,
     Page3Component,
-    FormFieldOverviewExampleComponent
+    FormFieldOverviewExampleComponent,
+    Page5Component,
+    Page6Component,
+    Page7Component
   ],
   providers: [
     HomeAuthResolver

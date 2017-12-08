@@ -2,12 +2,25 @@
 background-color: #5dbd85;
 }
 .bg1{
-background-color: #ccc;
+background-color:rgba(204, 204, 204, 0.2);
 }
 .bg2{
 background-color: #f8f8f8;
 }
 .bb{
   border-bottom: 1px solid #ccc;
-  opacity:0.6;
+  opacity:0.1;
+}
+.d{
+  display:flex;
+}
+.i1{
+  background-color:#5dbd85;font-size:larger;color:#F8F8F8;
+}
+.margin{
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+.pl{
+  padding-left: 4.5rem;
 }
