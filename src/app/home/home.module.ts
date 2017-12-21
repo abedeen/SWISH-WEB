@@ -174,6 +174,13 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
+  },
+  {
+    path: 'swishStream',
+    component: Page14Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
   }
 ]);
 
