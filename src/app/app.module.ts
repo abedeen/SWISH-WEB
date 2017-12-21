@@ -31,16 +31,18 @@ import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.co
 //import {SlideToggleOverviewExample} from './slide-toggle-overview-example';
 import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
 import { Page5Component } from './page5/page5.component';
+import { Page14Component } from './page14/page14.component';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     FooterComponent,
     HeaderComponent,
     SidenavOverviewComponent,
     FormFieldOverviewExampleComponent,
-    Page5Component
+    Page5Component,
+    Page14Component
   ],
 
   imports: [BrowserAnimationsModule,NoopAnimationsModule,MatSidenavModule,MatFormFieldModule,MatSelectModule,

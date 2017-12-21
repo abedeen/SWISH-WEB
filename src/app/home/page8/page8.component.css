@@ -1,9 +1,10 @@
 .bg{
 background-color: #5dbd85;
 }
+nB{
+  text-decoration:none;
+  color:white !important;
+}
 .d{
   display:flex;
-}
-.bg1{
-  background-color: #00D6CC;
 }

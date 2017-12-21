@@ -1,0 +1,15 @@
+.bg{
+background-image: url("/assets/image/signup.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+ .style1{
+height: 60px;
+margin-left: 170px;
+width: 60px !important;
+background-color: #5dbd85 !important;
+border-radius: 50%;
+padding-top: 1rem;
+ }

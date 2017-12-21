@@ -1,0 +1,23 @@
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<div class="bg">
+  <div class="col-lg-12 pt-2" >
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+<i class="fa fa-angle-left fa-2x" style="color:white;" aria-hidden="true"></i>  </div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+</div>
+</div>
+  <div class="col-lg-12" style="height:80px;" ></div>
+  <div class="col-lg-12 text-center" >
+  <h2>Create a password</h2>
+  <p>Create a  password of atleast 5 characters</p>
+  <mat-form-field class="example-full-width">
+  <input matInput placeholder="Minimum of 5 characters" [type]="hide ? 'password' : 'text'">
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+</mat-form-field>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 text-center pt-4">
+<button class="btn-lg bb1"mat-raised-button style="">Next</button>
+</div>
+
+</div>

@@ -1,6 +1,13 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {MatInputModule,MatIconModule,MatButtonModule,MatSlideToggleModule,MatSelectModule} from '@angular/material';
+import {MatInputModule,
+  MatNativeDateModule,
+  MatIconModule,
+  MatDatepickerModule,
+  MatButtonModule,
+  MatSlideToggleModule,
+  MatSelectModule,
+ MatStepperModule} from '@angular/material';
 import { HomeComponent } from './home.component';
 import { HomeAuthResolver } from './home-auth-resolver.service';
 import { SharedModule } from '../shared';
@@ -19,6 +26,13 @@ import { FormFieldOverviewExampleComponent } from './form-field-overview-example
 import { Page5Component } from './page5/page5.component';
 import { Page6Component } from './page6/page6.component';
 import { Page7Component } from './page7/page7.component';
+import { Page8Component } from './page8/page8.component';
+import { Page9Component } from './page9/page9.component';
+import { Page10Component } from './page10/page10.component';
+import { Page11Component } from './page11/page11.component';
+import { Page12Component } from './page12/page12.component';
+import { Page13Component } from './page13/page13.component';
+import { Page14Component } from './page14/page14.component';
 //import { SignUpComponent } from './sign-up/sign-up.component';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -118,6 +132,48 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
+  },
+  {
+    path: 'notifications',
+    component: Page8Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'createprofile',
+    component: Page9Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'createpassword',
+    component: Page10Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'createusername',
+    component: Page11Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'usercontact',
+    component: Page12Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'message',
+    component: Page13Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
   }
 ]);
 
@@ -128,8 +184,11 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule
   ],
   declarations: [
     HomeComponent,
@@ -146,7 +205,14 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     FormFieldOverviewExampleComponent,
     Page5Component,
     Page6Component,
-    Page7Component
+    Page7Component,
+    Page8Component,
+    Page9Component,
+    Page10Component,
+    Page11Component,
+    Page12Component,
+    Page13Component,
+    Page14Component
   ],
   providers: [
     HomeAuthResolver

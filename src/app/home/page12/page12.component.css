@@ -1,0 +1,34 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 80%;
+}
+.bg{
+background-image: url("/assets/image/signup.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+.bb1{
+  background-color:#00D6CC;
+  width:320px;
+  text-align:right;
+  color:white;
+}
+.bb2{
+  background-color:#00D6CC !important;
+//  width:320px;
+//  text-align:right;
+  color:white !important;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
