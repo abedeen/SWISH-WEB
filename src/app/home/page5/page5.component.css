@@ -14,10 +14,17 @@ background-color: #5dbd85;
   border: 1px solid #ffffff69 !important;
   width: 120px;
 }
+.btcn1{
+  background-color:white;
+  color:#5dbd85;
+  border: 1px solid #ffffff69 !important;
+  width: 120px;
+}
 .btcn:hover{
   background-color:white;
   color:#5dbd85;
 }
+
 
 .b{
   border-bottom: 1px solid rgba(204, 204, 204, 0.26);

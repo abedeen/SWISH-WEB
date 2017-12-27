@@ -22,7 +22,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { DemoComponent } from './demo/demo.component';
 import { Page3Component } from './page3/page3.component';
-import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
+//import { FormFieldOverviewExampleComponent } from './form-field-overview-example/form-field-overview-example.component';
 import { Page5Component } from './page5/page5.component';
 import { Page6Component } from './page6/page6.component';
 import { Page7Component } from './page7/page7.component';
@@ -33,18 +33,19 @@ import { Page11Component } from './page11/page11.component';
 import { Page12Component } from './page12/page12.component';
 import { Page13Component } from './page13/page13.component';
 import { Page14Component } from './page14/page14.component';
+import { Page15Component } from './page15/page15.component';
+import { Page16Component } from './page16/page16.component';
+import { Page17Component } from './page17/page17.component';
+import { Page18Component } from './page18/page18.component';
+import { Page19Component } from './page19/page19.component';
+import { Page20Component } from './page20/page20.component';
+import { Page21Component } from './page21/page21.component';
+import { Page22Component } from './page22/page22.component';
 //import { SignUpComponent } from './sign-up/sign-up.component';
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'showMap',
     component: HomeComponent,
-    resolve: {
-      isAuthenticated: HomeAuthResolver
-    }
-  },
-  {
-    path: 'welcome',
-    component: WelcomeScreenComponent,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
@@ -78,14 +79,14 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     }
   },
   {
-    path: 'screen5',
+    path: 'pricingforrider',
     component: WelcomeScreenComponent,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
   },
   {
-    path: 'page1',
+    path: 'weeklySchedule',
     component: Page1Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
@@ -176,12 +177,68 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     }
   },
   {
-    path: 'swishStream',
+    path: 'addCreditDetails',
     component: Page14Component,
     resolve: {
       isAuthenticated: HomeAuthResolver
     }
-  }
+  },
+  {
+    path: 'pricingfordriver',
+    component: Page15Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'pickUpTime',
+    component: Page16Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'riderPickUpTime',
+    component: Page17Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'activity',
+    component: Page18Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },
+  {
+    path: 'pricing',
+    component: Page19Component,
+    resolve: {
+      isAuthenticated: HomeAuthResolver
+    }
+  },  {
+      path: 'payments',
+      component: Page20Component,
+      resolve: {
+        isAuthenticated: HomeAuthResolver
+      }
+    },
+    {
+        path: 'daySchedule',
+        component: Page21Component,
+        resolve: {
+          isAuthenticated: HomeAuthResolver
+        }
+      },
+      {
+          path: 'dayScheduleMessage',
+          component: Page22Component,
+          resolve: {
+            isAuthenticated: HomeAuthResolver
+          }
+        }
+
 ]);
 
 @NgModule({
@@ -209,7 +266,7 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     Page2Component,
     DemoComponent,
     Page3Component,
-    FormFieldOverviewExampleComponent,
+  //  FormFieldOverviewExampleComponent,
     Page5Component,
     Page6Component,
     Page7Component,
@@ -219,7 +276,15 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     Page11Component,
     Page12Component,
     Page13Component,
-    Page14Component
+    Page14Component,
+    Page15Component,
+    Page16Component,
+    Page17Component,
+    Page18Component,
+    Page19Component,
+    Page20Component,
+    Page21Component,
+    Page22Component
   ],
   providers: [
     HomeAuthResolver

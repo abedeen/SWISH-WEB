@@ -1,0 +1,9 @@
+.bg{
+background-color: #5dbd85;
+}
+.box{
+    background-color: white;
+    width:70px;
+   border-top:25px solid #5dbd85;
+ border-bottom :25px solid #5dbd85
+}

@@ -1,0 +1,110 @@
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<div class="bg2">
+  <div class="bg pt-2">
+    <div class="col-lg-12 text-center" style="display:flex;">
+      <div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
+          <i class="fa fa-angle-left fa-2x" style="background-color:#5dbd85;font-size:larger;padding-top:0.9rem;color:#F8F8F8;"></i>
+      </div>
+      <div class="col-xs-7 col-sm-6 col-md-4 col-lg-4">
+          <p class="mt-0 pt-2" style="font-size:18px;color:#F8F8F8;">Monday Evening</p>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
+          <div class="pl-3" style="display:flex; color:#F8F8F8;"><i class="fa fa-usd pt-1"></i><span class="pl-1 ">0</span></div>
+      <div style="color:#F8F8F8;display:flex;"><span>Balance</span></div>
+      </div>
+    </div>
+</div>
+<div class="pt-3" style="padding-left:1.7rem;">
+  <h5>Carpool Role</h5>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 d">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-2">
+<button mat-raised-button  class="btn-lg pull-right" style="width:170px;background-color:#ccc;">
+  Ride
+</button>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-2">
+<button mat-raised-button  class="btn-lg pull-left bg1" style="width:170px;color:white;">
+Drive
+</button>
+</div>
+</div>
+<div class="col-lg-12 mt-2 d">
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"><p class="mb-1 mt-1">If i don't match as dirver try to match me as rider.</p></div>
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pt-2"><mat-slide-toggle [(ngModel)]="disabled"></mat-slide-toggle></div>
+</div>
+<div style="border-bottom:1px solid #ccc;opacity0.5;" class="ml-4 mt-1 mr-4"></div>
+<div class="pt-2">
+  <h5 style="padding-left:1.7rem;">Your Address</h5>
+</div>
+<div class="col-lg-12 text-center d pr" style="height: 34px;">
+  <div class="col-md-5 col-sm-5 col-xs-5 d">
+  <i class="fa fa-home fa-2x" style="color:#5dbd85" aria-hidden="true"></i>
+<h4 class="pl-2 pt-1">Home</h4>
+</div>
+
+<div class="col-md-2 col-sm-2 col-xs-2 plr">
+  <i class="fa fa-long-arrow-right pt-4" style="color:#ccc;" aria-hidden="true"></i>
+
+</div>
+<div class="col-md-5 col-sm-5 col-xs-5 pt-2 d plr">
+  <i class="fa fa-briefcase fa-2x" style="color:#5dbd85" aria-hidden="true"></i>
+  <h4 class="pl-2 pt-1">Work</h4>
+</div>
+</div>
+<div class="col-lg-12 text-center bg2 d pr">
+
+<div class="col-md-5 col-sm-5 col-xs-5 pt-1">
+  <p class="text-left h mb-0">936 azure street</p>
+  <p class="text-left mb-0">Sunnyvale</p>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-2 pr">
+</div>
+
+<div class="col-md-5 col-sm-5 col-xs-5 pt-1 plr">
+  <p class="text-left h mb-0">18880 Homestead road</p>
+  <p class="text-left mb-0">Cupertino</p>
+</div>
+</div>
+<div style="border-bottom:1px solid #ccc;opacity0.5;" class="mt-3 ml-4 mr-4"></div>
+<div class="pt-2" style="padding-left:1.7rem;">
+  <h5>Rider pickup time</h5>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 pl-0 d">
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pr-0 pl-0">
+<button mat-raised-button  class="btn-lg pull-right bg1" style="width:140px;color:white;">
+  4:40pm
+</button>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pl-0 pr-0">
+<h6 class="pl-4 pt-2">to</h6>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pl-0">
+<button mat-raised-button  class="btn-lg pull-left bg1" style="width:140px;color:white;">
+5:10pm
+</button>
+</div>
+</div>
+<div style="border-bottom:1px solid #ccc;opacity0.5;" class="ml-4 mr-4 mt-3"></div>
+</div>
+<div style="padding-left:1.7rem;">
+  <p class="pr-3">Swish gives drivers a time to leave that is slightly earlier than the rider pickup time</p>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2" style="display:flex">
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                  <div>
+                     <p style="font-size:10px;margin-bottom:0px;"> Get</p>
+                  </div>
+	 	  <div>
+                     <p style="font-size:10px;margin-bottom:0px;"> <i class="fa fa-usd" aria-hidden="true"></i>
+3-6</p>
+                  </div>
+ 		  <div style="display:flex">
+                     <!--img src="assets/image/coin.jpg" class="pr-2 " height="10%"; width="10%";/-->
+                     <p style="margin-bottom:0px;color:#00D6CC;font-size:10px;">1 Credit Remaining</p>
+                  </div>
+		 </div>
+	    <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4 pull-right">
+	      <button mat-raised-button class="btn btn-lg" style="color:white;width:100px;background-color:#00D6CC;">Next <i class="fa fa-arrow-right pl-2" style="color:white" aria-hidden="true"></i></button>
+	   </div>
+           </div>
